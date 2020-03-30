@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- links to styling files -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" type="text/css" href="style/all.css" media="all" />
+
+  <!-- links to javascript files -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+  <!-- Import Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Markazi+Text" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+
+  <title>Marvel Universe</title>
+</head>
+
+
+<body style="margin: 30px; padding: 40px">
+
+<div class="row" style = "margin-bottom: 15px; margin-top: 15px">
+        <div class="col-sm-1">
+          <center><img class= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/collector.svg" alt="" style = "width: 70px;height:70px" ></center>
+
+        </div>
+        <div class="col-sm-1">
+          <center><img class= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/ironm.svg" alt="" style = "width: 70px;height:70px" ></center>
+
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/spiderman.svg" alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/tchakay.svg" alt="" style = "width: 70px;height:70px"></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/wandam.svg" alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/nakia.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+           <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/mayp.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/meredithq.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/obsidianc.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/ramonda.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/stanlee.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/wolfgangv.svg"alt="" style = "width: 70px;height:70px"></center>
+        </div>
+
+</div>
+<div class="row" style = "margin-bottom: 15px; margin-top: 15px">
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/aletao.svg"alt="" style = "width: 70px;height:70px"></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img class= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/abub.svg" alt="" style = "width: 70px;height:70px" ></center>
+
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/annem.svg" alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+        <div class="col-sm-6">
+          <center><h1>Marvel Cinematic Universe</h1></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/blackpk.svg" alt="" style = "width: 70px;height:70px"></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/darkelf.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+           <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/fenris.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+
+</div>
+<div class="row" style = "margin-bottom: 15px; margin-top: 15px">
+        <div class="col-sm-1">
+          <center><img class= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/hawke.svg" alt="" style = "width: 70px;height:70px" ></center>
+
+        </div>
+        <div class="col-sm-1">
+          <center><img class= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/grootp.svg" alt="" style = "width: 70px;height:70px" ></center>
+
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/frigga.svg" alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/ebonym.svg" alt="" style = "width: 70px;height:70px"></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/antman.svg" alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+        <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/cosmo.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+           <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/gamora.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/helenc.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/hopev.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/laufey.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/marias.svg"alt="" style = "width: 70px;height:70px" ></center>
+        </div>
+         <div class="col-sm-1">
+          <center><img sclass= "center-block" src="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/images_doc/marvel/nodeIcons/merchantt.svg"alt="" style = "width: 70px;height:70px"></center>
+        </div>
+
+
+</div>
+<p style="font-size: 0.6rem">image credit to <a href="https://graphics.straitstimes.com/STI/STIMEDIA/Interactives/2018/04/marvel-cinematic-universe-whos-who-interactive/index.html">Billy Ker, Chee Wei Xian, and Denise Chong</a></p>
+
+  <!-- <h1>Marvel Heros - 6.894 A3</h1> -->
+
+<div class="description">
+  <p>
+    Marvel series have always been a great hit. Yet there seems to be thousands of superheroes for readers to memorize, as well as the complicated relationships between them. We want to understand more about the heroes' demographic stereotypes as a group, not just the few main ones. And by analyzing the trends in creating Marvel characters, we also want to see whether there are changes in values widely recognized by the society through the years.
+  </p>
+  </br>
+  <a href="writeup.html" class="write-up-link">WRITE UP</a>
+</div>
+
+  <br/>
+<p></p>
+  <!-- to be selected in javascript files -->
+  <div id="demographic-graph">
+    <h4 class="graphTitle">Demographic</h4>
+      <div id="controllers">
+          <div class="row">
+            <div class="col-sm-4">
+              <center><img src="public/maggiel.svg" alt="" style = "width: 100px;height:100px" id="sortByHair" ></center>
+
+            </div>
+            <div class="col-sm-4">
+              <center><img src="public/anciento.svg" alt="" style = "width: 100px;height:100px" id="sortByEye"></center>
+            </div>
+            <div class="col-sm-4">
+              <center> <img src="public/christinep.svg" alt="" style = "width: 100px;height:100px" id="sortBySex" ></center>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-sm-4">
+              <!-- <button class = "button" id="sortByHair">Sort By Hair Color</button> -->
+              <center><p style="font-size: 0.8rem">SORT BY HAIR COLOR</p></center>
+            </div>
+            <div class="col-sm-4">
+              <!-- <button class = "button" id="sortByEye">Sort By Eye Color</button> -->
+              <center><p style="font-size: 0.8rem">SORT BY EYE COLOR</p></center>
+            </div>
+            <div class="col-sm-4">
+              <!-- <button class = "button" id="sortBySex">Sort By Sex</button> -->
+              <center><p style="font-size: 0.8rem">SORT BY SEX</p></center>
+            </div>
+
+          </div>
+      </div>
+  </div>
+
+    <!-- <div id="buttonContainer"> -->
+  		<!-- <button class = "button" id="sortByHair">Sort By Hair Color</button> -->
+  		<!-- <button class = "button" id="sortByEye">Sort By Eye Color</button> -->
+  		<!-- <button class = "button" id="sortBySex">Sort By Sex</button> -->
+  	<!-- </div> -->
+
+  <div id="network-graph">
+    <h4 class="graphTitle">Network</h4>
+    <div class="description" id="inner">
+      <p>
+        Besides demographic distribution, we are also interesed in looking at the relationship between heroes. We selected the heroes with highest number
+        of appearances and show them as dots in a descending order. We use the hair color for color-coding here and show the co-ocurrence between heros using an arch.
+      </p>
+    </div>
+  </div>
+
+  <script src="demovis.js" charset="utf-8"></script>
+  <script src="marvel_test.js" charset="utf-8"></script>
+
+  <div id="footer">
+    <p>Created for 6.894 Interactive Data Visualization at MIT by Jialu Tan, Qianhui Liang, Yichen Jia</p>
+  </div>
+</body>
+
+</html>

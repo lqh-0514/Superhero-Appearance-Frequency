@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Design Rationale</title>
+    <!-- links to styling files -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" type="text/css" href="index.css" /> -->
+    <link rel="stylesheet" type="text/css" href="style/all.css" media="all" />
+  </head>
+  <body>
+    <div class="container my-5">
+      <h2>
+        Marvel Superhero Trends Visualization
+      </h2>
+      <p>
+        Marvel series have always been a great hit. Yet there seems to be thousands of superheroes for readers to memorize, as well as the complicated relationships between them. We want to understand more about the heroes' demographic stereotypes as a group, not just the few main ones. And by analyzing the trends in creating Marvel characters, we also want to see whether there are changes in values widely recognized by the society through the years.
+      </p>
+      <p>
+        Here we used two datasets, both from Kaggle. One is<a href="https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset"> FiveThirtyEight Comic Characters Dataset </a>with characters' basic information including the year he/she was created, appearance frequency in comic books, hair color, eye color,  and gender. The other dataset is <a href="https://www.kaggle.com/csanhueza/the-marvel-universe-social-network#hero-network.csv ">Marvel Universe the Social Network</a> which has the counts of interactions between characters. We used the two datasets to complement each other. A more detailed description on the acquiring and  limit of the dataset can be found in the links.
+      </p>
+      <h2>
+        Rational for Design Decisions
+      </h2>
+      <p>
+        Since we have two datasets, one about basic demographic information and the other about interactions, we want to use two visualizations to answer two questions:
+      </p>
+
+      <ul>
+        <li>Is there a stereotype transformation through the years? </li>
+        <li>Were the most frequent interactions between characters with some dominant features (either the gender or eye or hair color- which we think might indicate the race of the character)?</li>
+      </ul>
+
+      <p>
+        Therefore, with the two questions, we wanted to use a timeline for the first visualization with each character represented by a line, starting from the year he/she was created and ending at the year he/she deceased. Then we realized that by using lines, the variance of eye and hair colors would be really hard to recognize since the lines might be very thin to accommodate such large dataset. Besides, in the different years, the amount of characters created varies. By using continuous lines, we wouldn't be able to show the rise and fall, because the height of compiling lines would be the cumulative amount. So we changed our idea to using small circles to represent the heroes, and using colors to reflect the character's hair and eye color. In this way, we sort the circles by the heroes' gender or eye color, and the height of lined-up circles would reflect the amount of characters created in that single year.
+      </p>
+      <p>
+        For the second visualization, at first we wanted to use the kind of dynamic graph where you can drag and pull the circles. We thought linking the circles in a 3D space and allowing readers to drag them would visualize the relationships in a clear way. Then after going to the details, we found that that type of visualization might be over our capability, so we switched to an arch representation prototype which we also like a lot. So here the second visualization is the final product with circles lining up on the bottom showing the character's hair color, and links between the circles with different widths showing the count of interactions.
+        In general, we've realized the visual effects that are important for answering our questions. And the final products share similar structures with our visions at the beginning.
+      </p>
+      <h2>Overview of Development Process</h2>
+      <p>
+        The work was divided evenly between group members. We process the whole work in three steps, data wrangling and cleaning, visualization one and two. On average, it took 20-30 hours for each of the team member to finish the assignment, mainly because we are not really familiar with d3 and JavaScript, and have to learn a lot of things from the beginning.
+      </p>
+      <p>
+        Qianhui took charge of the data wrangling part. The main problem of our datasets was that the names of superheroes didn’t match in the two datasets, which took us a great amount of time matching the names later. And another challenge is that the datasets are too large to represent. The first one has more than 6000 characters with 500k records and the second has more than 65,000 records of interactions. So here Qianhui built a graph with edges to represents coocurrence and filtered the data based on appearance frequency and found the appropriate number of records to keep for visualization. After that Qianhui helped on the styling of the entire webpage by adding in more visual elements.
+      </p>
+      <p>
+        Yichen took charger of the first graph, which deploys a dot histogram to show the demographic distribution of heroes on a timeline. Users can choose to sort the dots by heroes' hair color, eye color or sex. The graph was built step by step from constructing the dot graph, add sorting and filter, and add interaction. Each of the steps took a considerable amount of time, but the overall process was pretty smooth. The major challenges we encountered in this graph was to make design decisions about how to display the hair and eye color. We was trying to use the color names from the original dataset after parsing it, but found out that colors like white and hazel are really hard to represent. Therefore we have to customize the color a bit. After finishing the first graph, Yichen was helping on the debugging of the second graph.
+      </p>
+      <p>
+      </p>
+        Jialu took charge of the second graph, which deploys an arch representation to show the superhero network. It took a long time to build the framework of the visualization, understand the data structure, figure out what kinds of data should be feed into nodes and links, and just debug. It also took some time to modify the parameters of scales, colors, stroke-widths, and opacities so that the graph is readable.
+      <!-- <ol>
+        <li>Finding a dataset:</li>
+        <a href="https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset">Kaggle: FiveThirtyEight Comic Characters Dataset</a>
+        <br/><a href="https://www.kaggle.com/csanhueza/the-marvel-universe-social-network#hero-network.csv Todo:">Kaggle: The Marvel Universe Social Network</a>
+        <li>Sanitizing data</li>
+        <li>Exploring data and D3</li>
+        <li>Creating initial framework</li>
+        <li>Ideating and implementing prototype design</li>
+        <li>Getting user feedback</li>
+        <li>Adding features and fleshing out project</li>
+      </ol> -->
+
+
+      </br>
+      </br>
+      <div class="description">
+        <a href="index.html" class="write-up-link">BACK TO VISUALIZATION</a>
+      </div>
+
+      <div id="footer">
+        <p>Created for 6.894 Interactive Data Visualization at MIT by Jialu Tan, Qianhui Liang, Yichen Jia</p>
+      </div>
+
+    </div>
+
+  </body>
