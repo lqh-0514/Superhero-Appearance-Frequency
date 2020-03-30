@@ -1,3 +1,4 @@
+_This repo was originally at https://github.mit.edu/6894-sp19/Superhero-Appearance-Frequency, contributed by Yichen Jia, Qianhui Liang, Jialu Tan. It was imported for non-MIT access._
 # Superhero-Appearance-Frequency
 Dataset sources:
 - https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset
